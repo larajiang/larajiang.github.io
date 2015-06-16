@@ -25,7 +25,7 @@ $ hexo n #完整命令为hexo new,用于新建一篇文章
 
 
 1、安装gitsudo apt-get install git-">
-<meta property="og:updated_time" content="2015-06-16T02:15:22.000Z">
+<meta property="og:updated_time" content="2015-06-16T02:20:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="deploy-blog">
 <meta name="twitter:description" content="基本命令：
@@ -126,13 +126,21 @@ npm install
 <p>7、本地运行与调试<br>hexo server<br>网页运行在<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
 <p>8、部署到Github</p>
 <p><pre><code><br>hexo clean   #清除缓存文件（db.json) 和hexo generate 生成的文件（public）<br>hexo generate  #生成静态文件，存储在public 文件夹中<br>hexo deploy #部署你的网页<br></code></pre><br>此时，在hexo根目录下会生成一个文件夹：.deploy<br>因为hexo版本的问题，没有出现该文件夹，出现<br>ERROR Deployer not found : github<br>运行以下命令,或者直接先运行这个命令更好。</p>
-<p><pre><code><br>$ npm install hexo-deployer-git —save<br>$ hexo g<br>$ hexo d<br></code></pre><br>这时在hexo根目录下出现了一个.deploy_git 文件夹<br>然后运行<br> hexo generate<br>hexo deploy<br>出现   error: src refspec master does not match any.<br>这时因为 push 的文件为空，运行<br><code>git commit -am “message”</code><br> 重新运行 hexo deploy<br>成功！<br>注意：<br>在浏览器中输入username.github.io就见到成果了。注意hexo deploy的部署过程：将public中文件复制到.deploy中，然后就是利用Git来push到远程GitHub仓库了。<br>9.problem shooting：<br>    1、安装完成后，每次重启终端，都无法找到hexo命令“can not found command hexo”<br>    原因：没有指定node的版本<br>    解决方案：<br>    a.删除 ~/.nvm ~/.npm 来uninstall nvm<br>    b.nvm use 0.10.35<br>       nvm alias default 0.10.35<br>    c. 重新进行第二步<br>10.后续：<br>1、发表文章<br>hexo new [layout] <title><br>2、编写文章<br>在hexo\source_posts 中打开  **.md<br>使用Markdown<br>3、写文章后使用hexo g 生产静态文件<br>     hexo s 在本地查看效果<br>     hexo d  同步到github，使用larajiang.github.io 进行访问。</title></p>
-<p>11.参考链接：<br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">http://opiece.me/2015/04/09/hexo-guide/</a><br><a href="http://leebug38.github.io/2014/02/06/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">http://leebug38.github.io/2014/02/06/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a><br><a href="http://segmentfault.com/a/1190000000458953" target="_blank" rel="external">http://segmentfault.com/a/1190000000458953</a><br><a href="https://github.com/hexojs/hexo/issues/206" target="_blank" rel="external">https://github.com/hexojs/hexo/issues/206</a></p>
+<p><pre><code><br>$ npm install hexo-deployer-git —save<br>$ hexo g<br>$ hexo d<br></code></pre><br>这时在hexo根目录下出现了一个.deploy_git 文件夹<br>然后运行</p>
+<p><pre><code><br> hexo generate<br> hexo deploy<br></code></pre><br>出现   error: src refspec master does not match any.<br>这时因为 push 的文件为空，运行</p>
+<p><pre><code>git commit -am “message”</code></pre><br> 重新运行 </p>
+<p><pre><code>hexo deploy</code></pre><br>成功！<br>注意：<br>在浏览器中输入username.github.io就见到成果了。注意hexo deploy的部署过程：将public中文件复制到.deploy中，然后就是利用Git来push到远程GitHub仓库了。<br>9、problem shooting：<br>    1、安装完成后，每次重启终端，都无法找到hexo命令“can not found command hexo”<br>    原因：没有指定node的版本<br>    解决方案：<br>    a.删除 ~/.nvm ~/.npm 来uninstall nvm<br>    b.nvm use 0.10.35<br>       nvm alias default 0.10.35<br>    c. 重新进行第二步<br>10、后续：</p>
+<ol>
+<li>发表文章<br>hexo new [layout] <title></title></li>
+<li>编写文章<br>在hexo\source_posts 中打开  **.md<br>使用Markdown </li>
+<li>写文章后使用hexo g 生产静态文件<br>  hexo s 在本地查看效果<br>  hexo d  同步到github，使用larajiang.github.io 进行访问。</li>
+</ol>
+<p>11、参考链接：<br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">http://opiece.me/2015/04/09/hexo-guide/</a><br><a href="http://leebug38.github.io/2014/02/06/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">http://leebug38.github.io/2014/02/06/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a><br><a href="http://segmentfault.com/a/1190000000458953" target="_blank" rel="external">http://segmentfault.com/a/1190000000458953</a><br><a href="https://github.com/hexojs/hexo/issues/206" target="_blank" rel="external">https://github.com/hexojs/hexo/issues/206</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/15/deploy-blog/" data-id="ciay2jb3s00006wjxv2a6dvfl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/15/deploy-blog/" data-id="ciaypdn640000qfjxsbwatkjv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客，文章/">博客，文章</a></li></ul>
