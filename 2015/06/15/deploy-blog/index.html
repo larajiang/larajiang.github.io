@@ -5,19 +5,37 @@
   
   <title>deploy-blog | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本命令：$ hexo g #完整命令为hexo generate,用于生成静态文件$ hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览$ hexo d #完整命令为hexo deploy,用于将本地文件发布到github上$ hexo n #完整命令为hexo new,用于新建一篇文章
-1、安装gitsudo apt-get install git-core2、">
+  <meta name="description" content="基本命令：
+$ hexo g #完整命令为hexo generate,用于生成静态文件
+$ hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览
+$ hexo d #完整命令为hexo deploy,用于将本地文件发布到github上
+$ hexo n #完整命令为hexo new,用于新建一篇文章
+
+
+1、安装gitsudo apt-get install git-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="deploy-blog">
 <meta property="og:url" content="http://yoursite.com/2015/06/15/deploy-blog/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="基本命令：$ hexo g #完整命令为hexo generate,用于生成静态文件$ hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览$ hexo d #完整命令为hexo deploy,用于将本地文件发布到github上$ hexo n #完整命令为hexo new,用于新建一篇文章
-1、安装gitsudo apt-get install git-core2、">
-<meta property="og:updated_time" content="2015-06-15T15:19:11.761Z">
+<meta property="og:description" content="基本命令：
+$ hexo g #完整命令为hexo generate,用于生成静态文件
+$ hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览
+$ hexo d #完整命令为hexo deploy,用于将本地文件发布到github上
+$ hexo n #完整命令为hexo new,用于新建一篇文章
+
+
+1、安装gitsudo apt-get install git-">
+<meta property="og:updated_time" content="2015-06-16T02:15:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="deploy-blog">
-<meta name="twitter:description" content="基本命令：$ hexo g #完整命令为hexo generate,用于生成静态文件$ hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览$ hexo d #完整命令为hexo deploy,用于将本地文件发布到github上$ hexo n #完整命令为hexo new,用于新建一篇文章
-1、安装gitsudo apt-get install git-core2、">
+<meta name="twitter:description" content="基本命令：
+$ hexo g #完整命令为hexo generate,用于生成静态文件
+$ hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览
+$ hexo d #完整命令为hexo deploy,用于将本地文件发布到github上
+$ hexo n #完整命令为hexo new,用于新建一篇文章
+
+
+1、安装gitsudo apt-get install git-">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -89,20 +107,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>基本命令：<br>$ hexo g #完整命令为hexo generate,用于生成静态文件<br>$ hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览<br>$ hexo d #完整命令为hexo deploy,用于将本地文件发布到github上<br>$ hexo n #完整命令为hexo new,用于新建一篇文章</p>
-<p>1、安装git<br>sudo apt-get install git-core<br>2、安装node.js<br>    2.1安装 nvm<br>     wget -qo- <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="external">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br>   2.2 restart the terminal   and RUN  “nvm install 0.12”<br>3、安装Hexo<br>  npm install -g hexo-cli<br>4、Once Hexo is installed, run the following commands to initialise Hexo in the target <folder> hexo<br>hexo init hexo<br>cd hexo<br>npm install</folder></p>
+        <p>基本命令：</p>
+<pre><code>$ hexo g #完整命令为hexo generate,用于生成静态文件
+$ hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览
+$ hexo d #完整命令为hexo deploy,用于将本地文件发布到github上
+$ hexo n #完整命令为hexo new,用于新建一篇文章
+</code></pre>
+
+<p>1、安装git<br>sudo apt-get install git-core<br>2、安装node.js<br>    2.1安装 nvm<br>     wget -qo- <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="external">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br>   2.2 restart the terminal   and RUN  “nvm install 0.12”<br>3、安装Hexo<br>  npm install -g hexo-cli<br>4、Once Hexo is installed, run the following commands to initialise Hexo in the target <folder> hexo</folder></p>
+<pre><code>
+hexo init hexo          
+cd hexo
+npm install
+</code></pre>
+
 <p>5、github  新建   repository</p>
 <p>6、配置 _config.yml</p>
 <p>7、本地运行与调试<br>hexo server<br>网页运行在<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
 <p>8、部署到Github</p>
-<p>hexo clean   #清除缓存文件（db.json) 和hexo generate 生成的文件（public）<br>hexo generate  #生成静态文件，存储在public 文件夹中<br>hexo deploy #部署你的网页</p>
-<p>此时，在hexo根目录下会生成一个文件夹：.deploy<br>因为hexo版本的问题，没有出现该文件夹，出现<br>ERROR Deployer not found : github<br>运行以下命令,或者直接先运行这个命令更好。<br>1<br>2<br>3<br>$ npm install hexo-deployer-git —save<br>$ hexo g<br>$ hexo d</p>
-<p>这时在hexo根目录下出现了一个.deploy_git 文件夹<br>然后运行<br> hexo generate<br>hexo deploy<br>出现   error: src refspec master does not match any.<br>这时因为 push 的文件为空，运行<br>“git commit -am “message””<br> 重新运行 hexo deploy<br>成功！<br>注意：<br>在浏览器中输入username.github.io就见到成果了。注意hexo deploy的部署过程：将public中文件复制到.deploy中，然后就是利用Git来push到远程GitHub仓库了。<br>参考链接：<br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">http://opiece.me/2015/04/09/hexo-guide/</a><br><a href="http://leebug38.github.io/2014/02/06/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">http://leebug38.github.io/2014/02/06/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a><br><a href="http://segmentfault.com/a/1190000000458953" target="_blank" rel="external">http://segmentfault.com/a/1190000000458953</a></p>
+<p><pre><code><br>hexo clean   #清除缓存文件（db.json) 和hexo generate 生成的文件（public）<br>hexo generate  #生成静态文件，存储在public 文件夹中<br>hexo deploy #部署你的网页<br></code></pre><br>此时，在hexo根目录下会生成一个文件夹：.deploy<br>因为hexo版本的问题，没有出现该文件夹，出现<br>ERROR Deployer not found : github<br>运行以下命令,或者直接先运行这个命令更好。</p>
+<p><pre><code><br>$ npm install hexo-deployer-git —save<br>$ hexo g<br>$ hexo d<br></code></pre><br>这时在hexo根目录下出现了一个.deploy_git 文件夹<br>然后运行<br> hexo generate<br>hexo deploy<br>出现   error: src refspec master does not match any.<br>这时因为 push 的文件为空，运行<br><code>git commit -am “message”</code><br> 重新运行 hexo deploy<br>成功！<br>注意：<br>在浏览器中输入username.github.io就见到成果了。注意hexo deploy的部署过程：将public中文件复制到.deploy中，然后就是利用Git来push到远程GitHub仓库了。<br>9.problem shooting：<br>    1、安装完成后，每次重启终端，都无法找到hexo命令“can not found command hexo”<br>    原因：没有指定node的版本<br>    解决方案：<br>    a.删除 ~/.nvm ~/.npm 来uninstall nvm<br>    b.nvm use 0.10.35<br>       nvm alias default 0.10.35<br>    c. 重新进行第二步<br>10.后续：<br>1、发表文章<br>hexo new [layout] <title><br>2、编写文章<br>在hexo\source_posts 中打开  **.md<br>使用Markdown<br>3、写文章后使用hexo g 生产静态文件<br>     hexo s 在本地查看效果<br>     hexo d  同步到github，使用larajiang.github.io 进行访问。</title></p>
+<p>11.参考链接：<br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">http://opiece.me/2015/04/09/hexo-guide/</a><br><a href="http://leebug38.github.io/2014/02/06/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">http://leebug38.github.io/2014/02/06/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a><br><a href="http://segmentfault.com/a/1190000000458953" target="_blank" rel="external">http://segmentfault.com/a/1190000000458953</a><br><a href="https://github.com/hexojs/hexo/issues/206" target="_blank" rel="external">https://github.com/hexojs/hexo/issues/206</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/15/deploy-blog/" data-id="ciay1qsy40000cpjxboxz59gz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/15/deploy-blog/" data-id="ciay2jb3s00006wjxv2a6dvfl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客，文章/">博客，文章</a></li></ul>
